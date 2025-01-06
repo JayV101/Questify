@@ -30,6 +30,7 @@ section {
     margin: 20px 0;
 }
 
+/* Goal List */
 #goal-list {
     list-style: none;
     padding: 0;
@@ -46,6 +47,7 @@ section {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Buttons */
 button {
     background-color: #4CAF50; /* Green */
     color: white;
@@ -61,11 +63,40 @@ button:hover {
     background-color: #45a049; /* Slightly darker green */
 }
 
+/* Timer Display */
 #timer-display {
     font-size: 2rem;
     margin: 10px 0;
 }
 
+/* Progress Section */
+#progress-section {
+    margin: 20px 0;
+    text-align: center;
+}
+
+progress {
+    width: 80%;
+    height: 20px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background-color: #4CAF50; /* Green */
+    border-radius: 10px;
+}
+
+progress::-moz-progress-bar {
+    background-color: #4CAF50; /* Green */
+}
+
+/* Streak Counter */
 #streak-count {
     font-size: 1.2rem;
     font-weight: bold;
