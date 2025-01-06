@@ -1,12 +1,85 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    text-align: center;
     margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    text-align: center;
+}
+
+header {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 5px 0 0;
+}
+
+main {
     padding: 20px;
 }
 
-h1 {
-    color: #4CAF50;
+section {
+    margin: 20px 0;
+}
+
+#goal-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#goal-list li {
+    background-color: #f4f4f4;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 500px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049; /* Slightly darker green */
+}
+
+footer {
+    background-color: #f4f4f4;
+    color: #333333;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+
+/* Mobile-first formatting */
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        width: 100%;
+        max-width: 500px;
+    }
 }
