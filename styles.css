@@ -31,36 +31,21 @@ section {
 }
 
 /* Goal List */
-#goal-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
 #goal-list li {
     background-color: #f4f4f4;
-    margin: 10px auto;
-    padding: 10px;
+    margin: 15px auto; /* Increased spacing */
+    padding: 15px; /* More padding inside the goal box */
     border-radius: 5px;
     max-width: 500px;
     text-align: left;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex; /* Align text and button horizontally */
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Buttons */
-button {
-    background-color: #4CAF50; /* Green */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: #45a049; /* Slightly darker green */
+#goal-list button {
+    margin-left: 10px; /* Space between goal text and button */
 }
 
 /* Timer Display */
@@ -100,6 +85,26 @@ progress::-moz-progress-bar {
 #streak-count {
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+/* Animation for Goal Completion */
+@keyframes completeGoal {
+    0% {
+        background-color: #4CAF50;
+        color: white;
+    }
+    50% {
+        background-color: #45a049;
+        transform: scale(1.1);
+    }
+    100% {
+        background-color: #4CAF50;
+        transform: scale(1);
+    }
+}
+
+.completed {
+    animation: completeGoal 1s ease-in-out;
 }
 
 footer {
