@@ -1,115 +1,56 @@
-/* Global Styles */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #333333;
-    text-align: center;
-}
-
-header {
-    background-color: #4CAF50; /* Green */
-    color: white;
-    padding: 20px 0;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2rem;
-}
-
-header p {
-    margin: 5px 0 0;
-}
-
-main {
-    padding: 20px;
-}
-
-section {
-    margin: 20px 0;
-}
-
-/* Goal List */
-#goal-list li {
-    background-color: #f4f4f4;
-    margin: 15px auto; /* Increased spacing */
-    padding: 15px; /* More padding inside the goal box */
-    border-radius: 5px;
-    max-width: 500px;
-    text-align: left;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex; /* Align text and button horizontally */
-    justify-content: space-between;
-    align-items: center;
-}
-
-#goal-list button {
-    margin-left: 10px; /* Space between goal text and button */
-}
-
-/* Timer Display */
-#timer-display {
-    font-size: 2rem;
-    margin: 10px 0;
-}
-
-/* Progress Section */
-#progress-section {
-    margin: 20px 0;
-    text-align: center;
-}
-
-progress {
-    width: 80%;
-    height: 20px;
-    appearance: none;
-    -webkit-appearance: none;
-}
-
-progress::-webkit-progress-bar {
-    background-color: #f4f4f4;
-    border-radius: 10px;
-}
-
-progress::-webkit-progress-value {
-    background-color: #4CAF50; /* Green */
-    border-radius: 10px;
-}
-
-progress::-moz-progress-bar {
-    background-color: #4CAF50; /* Green */
-}
-
-/* Streak Counter */
-#streak-count {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-/* Animation for Goal Completion */
-@keyframes completeGoal {
-    0% {
-        background-color: #4CAF50;
-        color: white;
-    }
-    50% {
-        background-color: #45a049;
-        transform: scale(1.1);
-    }
-    100% {
-        background-color: #4CAF50;
-        transform: scale(1);
-    }
-}
-
-.completed {
-    animation: completeGoal 1s ease-in-out;
-}
-
-footer {
-    background-color: #f4f4f4;
-    color: #333333;
-    padding: 10px 0;
-    font-size: 0.9rem;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questify</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Questify</h1>
+        <p>Your ultimate flow-state productivity tracker.</p>
+    </header>
+    <main>
+        <section id="goal-section">
+            <h2>My Goals</h2>
+            <ul id="goal-list">
+                <!-- Goals will be dynamically added here -->
+            </ul>
+            <button id="add-goal-btn">Add Goal</button>
+        </section>
+        <section id="progress-section">
+            <h2>Progress</h2>
+            <div>
+                <h3>Today's Goals</h3>
+                <progress id="daily-progress" value="0" max="5"></progress>
+                <p id="daily-progress-text">0/5 Goals Completed</p>
+            </div>
+            <div>
+                <h3>Quarterly Goals</h3>
+                <progress id="quarterly-progress" value="0" max="50"></progress>
+                <p id="quarterly-progress-text">0/50 Goals Completed</p>
+            </div>
+        </section>
+        <section id="quarterly-goals-section">
+            <h2>Set Quarterly Goals</h2>
+            <button id="set-quarterly-goals-btn">Set Quarterly Goals</button>
+            <ul id="quarterly-goals-list">
+                <!-- Quarterly goals will be dynamically added here -->
+            </ul>
+        </section>
+        <section id="streak-section">
+            <h2>Streaks</h2>
+            <p id="streak-count">Current Streak: 0</p>
+        </section>
+        <section id="timer-section">
+            <h2>Flow Timer</h2>
+            <p id="timer-display">00:00</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Questify. All rights reserved.</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
