@@ -19,10 +19,18 @@
             </ul>
             <button id="add-goal-btn">Add Goal</button>
         </section>
-        <section id="timer-section">
-            <h2>Flow Timer</h2>
-            <p id="timer-display">00:00</p>
-            <button id="start-timer-btn" disabled>Start Timer</button>
+        <section id="progress-section">
+            <h2>Progress</h2>
+            <div>
+                <h3>Today's Goals</h3>
+                <progress id="daily-progress" value="0" max="5"></progress>
+                <p id="daily-progress-text">0/5 Goals Completed</p>
+            </div>
+            <div>
+                <h3>Quarterly Goals</h3>
+                <progress id="quarterly-progress" value="0" max="50"></progress>
+                <p id="quarterly-progress-text">0/50 Goals Completed</p>
+            </div>
         </section>
         <section id="streak-section">
             <h2>Streaks</h2>
